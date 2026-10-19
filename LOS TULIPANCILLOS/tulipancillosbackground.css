@@ -1,0 +1,417 @@
+	
+/* =====================================
+   LOS TULIPANCILLOS
+   Estética botánica floral
+   ===================================== */
+
+/* PALETA DE COLORES */
+:root {
+    --rosa: #e8b8c0;
+    --rosa-claro: #f8e9eb;
+    --crema: #fffaf4;
+    --verde: #829477;
+    --verde-oscuro: #435744;
+    --burdeos: #8b4051;
+    --texto: #514742;
+    --borde: #e7d4cc;
+}
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #f7eeea;
+    background-image:
+        radial-gradient(
+            ellipse at 5% 5%,
+            rgba(232, 184, 192, 0.30),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 95% 95%,
+            rgba(130, 148, 119, 0.20),
+            transparent 35%
+        );
+    color: var(--texto);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* DOCUMENTO PRINCIPAL */
+body > div {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 45px 65px;
+    background-color: var(--crema);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    box-shadow: 0 12px 40px rgba(100, 65, 60, 0.08);
+}
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    position: relative;
+    margin: 0 0 35px;
+    padding: 45px 20px;
+    background-color: var(--rosa-claro);
+    border-top: 3px solid var(--rosa);
+    border-bottom: 3px solid var(--rosa);
+    color: var(--burdeos);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 7vw, 68px);
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+/* DETALLE DECORATIVO DEL TÍTULO */
+h1::before {
+    content: "❀";
+    display: block;
+    margin-bottom: 8px;
+    color: var(--verde);
+    font-size: 28px;
+    font-style: normal;
+    letter-spacing: 0;
+}
+
+
+h1::after {
+    content: "FLORA BOTÁNICA";
+    display: block;
+    margin-top: 18px;
+    color: var(--verde-oscuro);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    letter-spacing: 5px;
+    line-height: 1.8;
+}
+
+/* TÍTULOS DE SECCIÓN */
+h2 {
+    margin: 65px 0 25px;
+    padding: 13px 18px;
+    background-color: var(--rosa-claro);
+    border-left: 5px solid var(--burdeos);
+    color: var(--burdeos);
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+h2::after {
+    content: "  ✿";
+    color: var(--verde);
+    font-size: 21px;
+}
+
+/* SUBTÍTULOS */
+h3 {
+    margin: 45px 0 18px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--borde);
+    color: var(--verde-oscuro);
+    font-size: 24px;
+    font-weight: normal;
+}
+
+h3::before {
+    content: "❧ ";
+    color: var(--rosa);
+}
+
+/* SUBAPARTADOS */
+h4 {
+    margin: 35px 0 15px;
+    color: var(--burdeos);
+    font-size: 20px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+h5 {
+    margin-bottom: 8px;
+    color: var(--verde-oscuro);
+    font-size: 19px;
+    font-weight: normal;
+}
+
+/* PÁRRAFOS */
+p {
+    margin: 0 0 22px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+/* PALABRAS IMPORTANTES Y FECHAS */
+b,
+strong {
+    color: var(--burdeos);
+    font-weight: bold;
+}
+
+em {
+    color: #65765a;
+}
+
+/* IMÁGENES */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 35px auto 12px;
+    padding: 7px;
+    background-color: white;
+    border: 1px solid var(--borde);
+    border-radius: 4px;
+    box-shadow: 0 6px 18px rgba(90, 60, 55, 0.10);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.015);
+    box-shadow: 0 10px 24px rgba(90, 60, 55, 0.16);
+}
+
+/* PIES DE FOTO */
+small {
+    display: block;
+    margin: 10px auto 30px;
+    color: #75655d;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* LISTAS */
+ul,
+ol {
+    margin: 20px 0 30px;
+    padding-left: 35px;
+}
+
+li {
+    margin-bottom: 14px;
+    padding-left: 5px;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ul li::marker {
+    color: var(--verde);
+}
+
+ol li::marker {
+    color: var(--burdeos);
+    font-weight: bold;
+}
+
+/* LISTAS CON DESCRIPCIONES */
+li p {
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+/* ENLACES */
+a {
+    color: var(--burdeos);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rosa);
+    transition: color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+a:hover {
+    color: var(--verde-oscuro);
+    border-bottom-color: var(--verde);
+}
+
+/* DESTACAR LOS ENLACES DE RECURSOS */
+a:focus-visible {
+    outline: 2px solid var(--verde);
+    outline-offset: 4px;
+}
+
+/* LÍNEA DECORATIVA DE SEPARACIÓN */
+hr {
+    border: 0;
+    border-top: 1px solid var(--borde);
+    margin: 35px 0;
+}
+
+/* SELECCIÓN DE TEXTO */
+::selection {
+    background-color: var(--rosa);
+    color: var(--verde-oscuro);
+}
+
+/* ADAPTACIÓN A MÓVILES Y PANTALLAS PEQUEÑAS */
+@media (max-width: 700px) {
+    body {
+        padding: 12px;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    body > div {
+        padding: 22px 18px;
+    }
+
+    h1 {
+        padding: 30px 10px;
+        font-size: 42px;
+        letter-spacing: 1px;
+    }
+
+    h1::after {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    h2 {
+        margin-top: 45px;
+        font-size: 25px;
+    }
+
+    h3 {
+        font-size: 21px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    ul,
+    ol {
+        padding-left: 25px;
+    }
+
+    img {
+        margin-top: 25px;
+    }
+}
+
+/* RESPETAR LA PREFERENCIA DE MOVIMIENTO REDUCIDO */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    img {
+        transition: none;
+    }
+}
+
+
+/* Imágenes alineadas a la derecha, estilo Wikipedia */
+body > div img {
+    float: right;
+    clear: right;
+    max-width: 40%;
+    height: auto;
+    margin: 8px 0 15px 20px;
+    border-radius: 6px;
+}
+
+
+/* =========================================
+   IMÁGENES CON SMALL A LA DERECHA
+   Estilo Wikipedia
+   ========================================= */
+
+/* Imágenes que tienen una descripción small
+   inmediatamente después */
+body > div img:has(+ br + small),
+body > div img:has(+ small) {
+    float: right;
+    clear: right;
+    display: block;
+    width: auto;
+    max-width: 40%;
+    height: auto;
+    margin: 8px 0 0 22px;
+    border: 1px solid #e7d4cc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Descripción situada debajo de la imagen */
+body > div img:has(+ br + small) + br + small,
+body > div img:has(+ small) + small {
+    display: block;
+    float: right;
+    clear: right;
+    width: 40%;
+    box-sizing: border-box;
+    margin: 0 0 15px 22px;
+    padding: 6px 8px;
+    background-color: #f8e9eb;
+    color: #514742;
+    border: 1px solid #e7d4cc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Las imágenes sin descripción siguen siendo normales */
+body > div img:not(:has(+ br + small)):not(:has(+ small)) {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Los párrafos rodean las imágenes */
+body > div p {
+    text-align: justify;
+}
+
+/* Los títulos principales empiezan debajo de las imágenes */
+body > div h2 {
+    clear: both;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 600px) {
+    body > div img:has(+ br + small),
+    body > div img:has(+ small) {
+        max-width: 45%;
+        margin-left: 12px;
+    }
+
+    body > div img:has(+ br + small) + br + small,
+    body > div img:has(+ small) + small {
+        width: 45%;
+        margin-left: 12px;
+        font-size: 11px;
+    }
+}
+
+
+body > div img.ultima-imagen {
+    float: none;
+    clear: both;
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 25px auto;
+    box-sizing: border-box;
+}
